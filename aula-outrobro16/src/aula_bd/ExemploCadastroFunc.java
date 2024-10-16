@@ -15,6 +15,7 @@ public class ExemploCadastroFunc {
 			ps.setString(3, JOptionPane.showInputDialog("Setor:", "Secretaria"));// Setor
 			ps.executeUpdate();
 			JOptionPane.showMessageDialog(null, "Funcionario cadastrado com sucesso!");
+			
 			conexao.closeDB(cn, ps, null);
 //			System.out.println("ConexÃ£o encerrada.");            
 		} catch (SQLException e) {

@@ -12,7 +12,7 @@ public class ExecploResultSetFunc {
 			ConectaMySQL conexao = new ConectaMySQL();
 			Connection cn = conexao.openDB();
 			Statement st = cn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM funcionarios");
+			ResultSet rs = st.executeQuery("SELECT * FROM Funcionarios");
 			System.out.format("%-4S %-30S %-25S %-4S", "id", "Nome", "Idade", "Setor");
 			System.out.print("\n-----------------------------" + "--------------------------------------");
 			while (rs.next()) {
