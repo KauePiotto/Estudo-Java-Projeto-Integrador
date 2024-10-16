@@ -16,7 +16,7 @@ public class Funcionarios {
 		this.idade = idade;
 	}
 
-	public Funcionarios(int id, String nomeFuncionarios, String setorFuncionario, int idade) {
+	public Funcionarios(int id, String nomeFuncionarios, int idade, String setorFuncionario) {
 		super();
 		this.id = id;
 		this.nomeFuncionarios = nomeFuncionarios;
@@ -60,5 +60,10 @@ public class Funcionarios {
 	public String toString() {
 		return "Funcionarios [id=" + id + ", nomeFuncionarios=" + nomeFuncionarios + ", setorFuncionario="
 				+ setorFuncionario + ", idade=" + idade + "]";
+	}
+
+	public void imprimirFuncionarios() {
+		System.out.format("\n%-4d %-30s %-25s %,4.2f", getId(), getNomeFuncionarios(), getIdade(),
+				getSetorFuncionario());
 	}
 }

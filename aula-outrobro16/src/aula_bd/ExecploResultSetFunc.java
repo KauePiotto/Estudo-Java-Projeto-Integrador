@@ -6,22 +6,22 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import aula_bd.*;
 
-public class ExemploResultSet {
+public class ExecploResultSetFunc {
 	public static void main(String[] args) {
 		try {
 			ConectaMySQL conexao = new ConectaMySQL();
 			Connection cn = conexao.openDB();
 			Statement st = cn.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM alunos");
-			System.out.format("%-4S %-30S %-25S %-4S", "id", "Nome", "Telefone", "Nota");
+			ResultSet rs = st.executeQuery("SELECT * FROM funcionarios");
+			System.out.format("%-4S %-30S %-25S %-4S", "id", "Nome", "Idade", "Setor");
 			System.out.print("\n-----------------------------" + "--------------------------------------");
 			while (rs.next()) {
-				int id = rs.getInt("idalunos");
-				String nome = rs.getString("alunosNome");
-				String telefone = rs.getString("alunosTelefone");
-				double nota = rs.getDouble("alunosNota");
-				alunos novo = new alunos(id, nome, telefone, nota);
-				novo.imprimirAluno();
+				int id = rs.getInt("idFuncionarios");
+				String nome = rs.getString("nomeFuncionarios");
+				int idade = rs.getInt("idadeFuncionarios");
+				String setor = rs.getString("setorFuncionarios");
+				Funcionarios novo = new Funcionarios(id, nome, idade, setor);
+				novo.imprimirFuncionarios();
 			}
 			conexao.closeDB(cn, st, rs);
 		} catch (SQLException e) {
