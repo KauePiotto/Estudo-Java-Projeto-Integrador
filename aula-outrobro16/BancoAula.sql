@@ -9,7 +9,13 @@ VALUES ('','Fernando Tavares','(13) 55096-0000 ', '9,5');
 
 select * from alunos;
 
-INSERT iNTO funcionarios (idFuncionaros,nomeFuncionarios,idadeFunarios,setorFuncionarios)
+INSERT iNTO funcionarios (idFuncionarios,nomeFuncionarios,idadeFuncionarios,setorFuncionarios)
 VALUES ('','Fernando Tavares','20', 'Desevolvedor Junior');
+
+INSERT iNTO funcionarios (idFuncionarios,nomeFuncionarios,idadeFuncionarios,setorFuncionarios)
+VALUES ('','Guilherme Lucas','33', 'Secretario');
+
+INSERT iNTO funcionarios (idFuncionarios,nomeFuncionarios,idadeFuncionarios,setorFuncionarios)
+VALUES ('','Lucas Miranda','44', 'Gerente');
 
 select * from funcionarios;
